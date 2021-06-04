@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+/* font-family: 'Raleway', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+/* font-family: 'Open Sans', sans-serif; */
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
+:root {
+  --Dark-Blue-intro-and-email-sign-up-background: hsl(217, 28%, 15%);
+  --Dark-Blue-main-background: hsl(218, 28%, 13%);
+  --Dark-Blue-footer-background: hsl(216, 53%, 9%);
+  --Dark-Blue-testimonials-background: hsl(219, 30%, 18%);
+  --Cyan-inside-call-to-action-gradient: hsl(176, 68%, 64%);
+  --Blue-inside-call-to-action-gradient: hsl(198, 60%, 50%);
+  --Light-Red-error: hsl(0, 100%, 63%);
+  --White: hsl(0, 0%, 100%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: white;
+  background-color: var(--Dark-Blue-main-background);
+}
+/* the grid cont that should wrap every element */
+
+.biggrid {
+  display: grid;
+  row-gap: 9rem;
+  background-color: var(-dar);
+}
+/* style applied to each div with a display of grid */
+
+.grid {
+  display: grid;
+  background-color: var(--Dark-Blue-main-background);
+}
+
+.nav-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 93%;
+  margin: 1rem auto 4rem auto;
+}
+.nav li {
+  list-style: none;
+  display: inline-block;
+  font-size: 1rem;
+  opacity: 70%;
+}
+li + li {
+  padding-left: 1rem;
+}
+.fa-layer-group {
+  font-size: 2.3rem;
+  margin-right: 0.4rem;
+}
+.fyloicon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg {
+  background-color: var(--Dark-Blue-intro-and-email-sign-up-background);
+  background-image: url(/fylo-dark-theme-landing-page-master/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: left -65rem top 14.5rem;
+  background-size: cover;
+  /* border: 2px solid white; */
+}
+.hero__cont {
+  width: 87%;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  row-gap: 1.2rem;
+  /* border: 2px solid white; */
+}
+.hero img {
+  object-fit: cover;
+  width: 100%;
+}
+.hero a {
+  text-decoration: none;
+  background: linear-gradient(
+    to right,
+    var(--Cyan-inside-call-to-action-gradient),
+    var(--Blue-inside-call-to-action-gradient)
+  );
+  color: white;
+  padding: 1em 6.3em;
+  border-radius: 30px;
+  justify-self: center;
+  font-size: 1rem;
+  margin-top: 19px;
+}
+
+/* start of second section */
+.bg2 {
+  background-color: var(--Dark-Blue-main-background);
+  row-gap: 10rem;
+}
+/* .icon:nth-of-type(1)::before {
+  content: url("/fylo-dark-theme-landing-page-master/icon-access-anywhere.svg");
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  left: 10rem;
+} */
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.icon img {
+  height: 4.2rem;
+  width: 5.8rem;
+  object-fit: contain;
+}
+
+/* start of 3rd section */
+.bg3 {
+  width: 87%;
+  margin: 0 auto;
+}
+.stayproductive a span {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--Cyan-inside-call-to-action-gradient);
+  border-bottom: 2px solid var(--Cyan-inside-call-to-action-gradient);
+  padding-bottom: 5px;
+}
+.stayproductive a span::after {
+  content: url(/fylo-dark-theme-landing-page-master/icon-arrow.svg);
+  padding-left: 8px;
+  vertical-align: middle;
+
+  display: inline-block;
+}
+.stayproductive {
+  display: grid;
+  row-gap: 2rem;
+  justify-content: start;
+}
+.bg3 img {
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 4rem;
+}
+/* comments
+ start */
+.comcon {
+  display: grid;
+  row-gap: 2rem;
+  place-items: center;
+}
+.comments {
+  width: 80%;
+  background-color: var(--Dark-Blue-testimonials-background);
+  border-radius: 7px;
+  padding: 3rem 0;
+  box-shadow: 0px 0px 3px rgba(209, 209, 209, 0.1);
+}
+.comments:nth-of-type(1)::before {
+  background-image: url(/fylo-dark-theme-landing-page-master/bg-quotes.png);
+  background-repeat: no-repeat;
+  background-size: 23px 20px;
+  display: inline-block;
+  width: 23px;
+  height: 20px;
+  content: "";
+  position: relative;
+  bottom: 4.28rem;
+  left: 0.6rem;
+}
+
+.com__s {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* combining comments
+ and profiles */
+.profile {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+}
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+h3 span {
+  display: block;
+  font-size: 0.8em;
+}
+/* form
+ section
+  start */
+.form-section {
+  width: 87%;
+  background-color: var(--Dark-Blue-intro-and-email-sign-up-background);
+  padding: 3rem;
+  margin: 0 auto;
+  border-radius: 4px;
+  text-align: center;
+  position: relative;
+  top: 3rem;
+  z-index: 3;
+}
+.form-section p {
+  margin: 2rem 0;
+}
+.form-section a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  border-radius: 30px;
+  background-color: var(--Cyan-inside-call-to-action-gradient);
+  padding: 1rem;
+}
+input[type="email"] {
+  width: 100%;
+  border-radius: 30px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  outline: none;
+}
+
+.before-footer {
+  background-color: var(--Dark-Blue-footer-background);
+  padding-top: 25rem;
+  position: relative;
+  bottom: 10rem;
+}
