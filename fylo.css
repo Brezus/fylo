@@ -74,7 +74,7 @@ p {
   font-size: 0.82rem;
   opacity: 80%;
 }
-li + li {
+.nav li + .nav li {
   padding-left: 1rem;
 }
 .fa-layer-group {
@@ -375,26 +375,31 @@ input[type="email"] {
 } */
 .before-footer {
   background-color: var(--Dark-Blue-footer-background);
-  display: flex;
 }
-.bfr__foot {
+.block {
+  display: block;
+}
+.first {
   padding: 18rem 0 2rem 0;
   margin: 0 auto;
   width: 85%;
   max-width: 500px;
 }
-/* @media screen and (min-width: 800px) {
-  .bfr__foot {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+@media screen and (min-width: 800px) {
+  .first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0 2rem 0;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 5rem;
     place-items: center;
     padding: 8rem 0 0 0;
     width: 100%;
     max-width: 1000px;
-    grid-template-areas: "first second third fourth fifth";
+    grid-template-areas: "first second third fourth fifth"; */
   }
-} */
+}
 .first {
   grid-area: first;
 }
@@ -409,29 +414,6 @@ input[type="email"] {
 }
 .fifth {
   grid-auto-flow: fifth;
-}
-/* @media screen and (min-width: 800px) {
-  .lin {
-    display: grid;
-  }
-  }
-} */
-/* .bfr__foot img {
-  margin-bottom: 1rem;
-} */
-
-.c-o-n-t {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-column-gap: 1.4rem;
-  padding-top: 1rem;
-  align-items: center;
-  justify-content: center;
-
-  grid-template-areas:
-    "loc lor"
-    "pho num"
-    "ema emai";
 }
 .contact-abt img:nth-of-type(1) {
   grid-area: loc;
@@ -461,6 +443,11 @@ input[type="email"] {
 .c-o-n-t + .c-o-n-t {
   margin-top: 2rem;
 }
+@media screen and (min-width: 800px) {
+  .c-o-n-t + .c-o-n-t {
+    margin-top: 0rem;
+  }
+}
 .c-o-n-t img {
   display: block;
   /* margin-right: 2.5rem; */
@@ -473,17 +460,33 @@ input[type="email"] {
   margin-top: 6rem;
   margin-bottom: 5rem;
 }
+@media screen and (min-width: 800px) {
+  .con-abt ul {
+    /* margin: 2px 0 0 0; */
+    padding: 0;
+  }
+}
 .con-abt ul li {
   list-style: none;
   padding-left: 0;
   padding-bottom: 20px;
   opacity: 70%;
 }
+@media screen and (min-width: 800px) {
+  .con-abt ul li {
+    padding-bottom: 0px;
+  }
+}
 .con-abt ul li + .con-abt ul li {
   padding-left: 0;
 }
 .space-between {
   margin-bottom: 3rem;
+}
+@media screen and (min-width: 800px) {
+  .space-between {
+    margin-bottom: 0rem;
+  }
 }
 .icons-cont {
   display: flex;
