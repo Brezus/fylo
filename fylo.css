@@ -80,7 +80,7 @@ p {
 .nav li a:hover {
   text-decoration: underline;
   opacity: 100%;
-  font-size: 0.95rem;
+
   font-weight: 700;
 }
 .fa-layer-group {
@@ -223,21 +223,34 @@ p {
   border-bottom: 2px solid var(--Cyan-inside-call-to-action-gradient);
   padding-bottom: 5px;
   font-size: 0.8rem;
+  transition: all 0.8s ease;
+  display: inline-block;
 }
 .stayproductive a span:hover {
   color: white;
   border-bottom: 2px solid white;
 }
-.stayproductive a span::after {
+.arrow {
+  display: inline-block;
+  height: 20px;
+  justify-self: start;
+}
+.arrow:hover {
+  filter: invert(84%) sepia(100%) saturate(0%) hue-rotate(29deg)
+    brightness(107%) contrast(104%);
+}
+.link-arrow {
+  display: grid;
+  grid-template-columns: 120px 20px;
+  justify-items: start;
+}
+/* .stayproductive a span::after {
   content: url(icon-arrow.svg);
   padding-left: 8px;
   vertical-align: middle;
   display: inline-block;
-}
-.stayproductive a span::after:hover {
-  color: white;
-  background-color: white;
-}
+} */
+
 .stayproductive {
   display: grid;
   row-gap: 1rem;
@@ -356,6 +369,7 @@ h3 span {
   z-index: 3;
   position: relative;
   bottom: -10.5rem;
+  box-shadow: 0px 3px 10px rgba(0, 0, 10, 0.363), 0px 3px 4px rgba(0, 0, 10, 1);
 }
 
 .form-section p {
@@ -373,6 +387,10 @@ h3 span {
     var(--Blue-inside-call-to-action-gradient)
   );
   padding: 1rem;
+  transition: all 0.8s ease-in;
+}
+.form-section a:hover {
+  background: var(--Cyan-inside-call-to-action-gradient);
 }
 @media screen and (min-width: 800px) {
   .form-section a {
@@ -452,12 +470,18 @@ input[type="email"] {
     grid-column-gap: 1rem;
   }
 }
-/* @media screen and (min-width: 800px) {
-  .first p {
-    display: inline-block;
-    width: 200px;
+.email,
+.second,
+.contact-abt {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 800px) {
+  .email,
+  .second,
+  .contact-abt {
+    margin-bottom: 0rem;
   }
-} */
+}
 /* @media screen and (min-width: 800px) {
   .first div + .first div {
     padding-left: 1rem;
@@ -505,6 +529,15 @@ input[type="email"] {
     padding-bottom: 0px;
   }
 }
+.lin ul li a {
+  text-decoration: none;
+  color: white;
+  opacity: 70%;
+}
+.lin ul li a:hover {
+  opacity: 100%;
+  font-weight: 700;
+}
 .lin ul li + .lin ul li {
   padding-left: 0;
 }
@@ -539,6 +572,9 @@ input[type="email"] {
 }
 .fab {
   font-size: 1.5rem;
+}
+.fab:hover {
+  color: var(--Cyan-inside-call-to-action-gradient);
 }
 .fab + .fab {
   padding-left: 15px;
