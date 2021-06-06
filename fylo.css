@@ -68,7 +68,7 @@ p {
   font-size: 0.82rem;
   opacity: 80%;
 }
-.nav li + .nav li {
+.nav li {
   padding-left: 1rem;
 }
 .fa-layer-group {
@@ -101,7 +101,7 @@ p {
     background-color: var(--Dark-Blue-intro-and-email-sign-up-background);
     background-image: url(bg-curvy-mobile.svg);
     background-repeat: no-repeat;
-    background-position: left -40rem top 14.5rem;
+    background-position: left -30rem top 20.5rem;
     background-size: cover;
     /* border: 2px solid white; */
   }
@@ -145,6 +145,10 @@ p {
   margin-top: 19px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+  transition: all 0.8s ease-in-out;
+}
+.hero a:hover {
+  background-color: blue;
 }
 
 /* start of second section */
@@ -330,8 +334,18 @@ h3 span {
   text-decoration: none;
   color: white;
   border-radius: 30px;
-  background-color: var(--Cyan-inside-call-to-action-gradient);
+  background: linear-gradient(
+    to right,
+    var(--Cyan-inside-call-to-action-gradient),
+    var(--Blue-inside-call-to-action-gradient)
+  );
   padding: 1rem;
+}
+@media screen and (min-width: 800px) {
+  .form-section a {
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
 }
 input[type="email"] {
   width: 100%;
@@ -345,10 +359,17 @@ input[type="email"] {
   opacity: 1;
   font-size: 0.7rem;
 }
+@media screen and (min-width: 800px) {
+  input[type="email"] {
+    width: auto;
+  }
+}
 
 @media screen and (min-width: 800px) {
   .form-anchor {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 1rem;
   }
 }
 
