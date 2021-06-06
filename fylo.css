@@ -459,6 +459,11 @@ input[type="email"] {
   margin-bottom: 3rem;
 }
 @media screen and (min-width: 800px) {
+  .number p {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 800px) {
   .space-between {
     margin-bottom: 0rem;
   }
