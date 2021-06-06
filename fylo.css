@@ -69,7 +69,19 @@ p {
   opacity: 80%;
 }
 .nav li {
-  padding-left: 1rem;
+  padding-left: 1.8rem;
+}
+.nav li a {
+  text-decoration: none;
+  color: white;
+  opacity: 70%;
+  transition: all 0.8s ease-out;
+}
+.nav li a:hover {
+  text-decoration: underline;
+  opacity: 100%;
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 .fa-layer-group {
   font-size: 2.3rem;
@@ -145,10 +157,10 @@ p {
   margin-top: 19px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  transition: all 0.8s ease-in-out;
+  transition: 0.5s ease-in;
 }
 .hero a:hover {
-  background-color: blue;
+  background: var(--Cyan-inside-call-to-action-gradient);
 }
 
 /* start of second section */
@@ -212,11 +224,19 @@ p {
   padding-bottom: 5px;
   font-size: 0.8rem;
 }
+.stayproductive a span:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}
 .stayproductive a span::after {
-  content: url(/fylo-dark-theme-landing-page-master/icon-arrow.svg);
+  content: url(icon-arrow.svg);
   padding-left: 8px;
   vertical-align: middle;
   display: inline-block;
+}
+.stayproductive a span::after:hover {
+  color: white;
+  background-color: white;
 }
 .stayproductive {
   display: grid;
@@ -276,7 +296,7 @@ p {
   padding-top: 0;
 }
 .comments:nth-of-type(1)::before {
-  background-image: url(/fylo-dark-theme-landing-page-master/bg-quotes.png);
+  background-image: url(bg-quotes.png);
   background-repeat: no-repeat;
   background-size: 23px 20px;
   display: inline-block;
@@ -287,7 +307,20 @@ p {
   bottom: 1.26rem;
   left: 0.6rem;
 }
-
+@media screen and (min-width: 800px) {
+  .comments:nth-of-type(1)::before {
+    background-image: url(bg-quotes.png);
+    background-repeat: no-repeat;
+    background-size: 35px 30px;
+    width: 35px;
+    height: 30px;
+    content: "";
+    position: relative;
+    bottom: 1.5rem;
+    left: -0.3rem;
+    z-index: -3;
+  }
+}
 .com__s {
   width: 90%;
   max-width: 500px;
