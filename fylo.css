@@ -176,6 +176,7 @@ p {
 }
 @media screen and (min-width: 800px) {
   .bg2 {
+    padding-top: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
